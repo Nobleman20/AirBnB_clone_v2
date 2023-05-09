@@ -1,15 +1,11 @@
 #!/usr/bin/python3
-'''Script that creates and distributes an archive to your web servers, using deploy():
 '''
-
+creates and distributes an archive to your web servers, using deploy()
+'''
 import os
 from datetime import datetime
 from fabric.api import env, local, put, run, runs_once
-
-
 env.hosts = ['174.129.55.27', '18.234.107.4']
-
-
 @runs_once
 def do_pack():
     """Archives the static files."""
@@ -32,8 +28,6 @@ def do_pack():
     except Exception:
         output = None
     return output
-
-
 def do_deploy(archive_path):
     """Deploys the static files to the host servers.
     Args:
@@ -59,8 +53,6 @@ def do_deploy(archive_path):
     except Exception:
         success = False
     return success
-
-
 def deploy():
     """Archives and deploys the static files to the host servers.
     """

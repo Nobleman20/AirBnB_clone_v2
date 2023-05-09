@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-''' A script that deletes out-of-date archives, using the function do_clean by Emmanuel Oluyege'''
+'''
+A script that deletes out-of-date archives, using the function do_clean
+'''
 import os
 from datetime import datetime
 from fabric.api import env, local, put, run, runs_once

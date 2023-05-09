@@ -1,17 +1,11 @@
 #!/usr/bin/python3
 """A script that deploy an archive of static html to my web servers with Fabric3"""
-
 from fabric import api
 from fabric.contrib import files
 import os
-
-
 api.env.hosts = ['174.129.55.27', ' 18.234.107.4']
 api.env.user = 'ubuntu'
 api.env.key_filename = '~/.ssh/alx_server'
-
-
-
 def do_deploy(archive_path):
     """Function to transfer `archive_path` to web servers.
     Args:
